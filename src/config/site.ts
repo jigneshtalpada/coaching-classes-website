@@ -1,0 +1,966 @@
+import {
+  SiteConfig,
+  Course,
+  FacultyMember,
+  PricingPlan,
+  Testimonial,
+  SampleResult,
+  FaqItem,
+} from "@/types/site";
+
+export const siteConfig: SiteConfig = {
+  name: "Coaching Classes Demo",
+  shortName: "Coaching Demo",
+  tagline: "Learn with Purpose. Achieve Beyond Limits.",
+  description:
+    "A premier coaching institute dedicated to academic excellence, concept mastery, and competitive exam preparation with personalized mentoring.",
+  establishedYear: 2014,
+  isDemoNoticeEnabled: false,
+  announcement: {
+    enabled: true,
+    text: "Admissions Open for 2025–26 Academic Sessions — Early Bird Guidance & Scholarship Tests Available",
+    actionText: "Explore Courses",
+    actionHref: "/courses",
+  },
+  contact: {
+    phone: "+91 98765 43210",
+    alternatePhone: "+91 98765 43211",
+    email: "admissions@coachingclasses.demo",
+    address: "Knowledge Center, University Main Road, Near City Circle",
+    city: "Ahmedabad",
+    state: "Gujarat",
+    pincode: "380009",
+    officeHours: "Monday – Saturday: 8:00 AM – 7:30 PM | Sunday: 9:00 AM – 1:00 PM",
+    whatsappNumber: "919876543210",
+    googleMapsEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9701763784534!2d72.544837!3d23.033481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAyJzAwLjUiTiA3MsKwMzInNDEuNCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin",
+    googleMapsDirectionsUrl: "https://maps.google.com/?q=Ahmedabad+University+Road",
+    isDemoDetails: true,
+  },
+  social: {
+    facebook: "https://facebook.com",
+    twitter: "https://twitter.com",
+    instagram: "https://instagram.com",
+    linkedin: "https://linkedin.com",
+    youtube: "https://youtube.com",
+  },
+  navLinks: [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Courses", href: "/courses" },
+    { label: "Faculty", href: "/faculty" },
+    { label: "Results", href: "/results" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Contact Us", href: "/contact" },
+  ],
+  footerLinks: [
+    {
+      title: "Programs",
+      items: [
+        { label: "School Tuition (6-10)", href: "/courses/school-tuition-class-9-10" },
+        { label: "Class 11-12 Science", href: "/courses/higher-secondary-science" },
+        { label: "JEE Main & Advanced", href: "/courses/jee-preparation-integrated" },
+        { label: "NEET Medical Entrance", href: "/courses/neet-medical-prep" },
+        { label: "State & Competitive Exams", href: "/courses" },
+      ],
+    },
+    {
+      title: "Institute",
+      items: [
+        { label: "About Our Vision", href: "/about" },
+        { label: "Faculty Directory", href: "/faculty" },
+        { label: "Student Results", href: "/results" },
+        { label: "Fee Structure & Plans", href: "/pricing" },
+        { label: "Admission Counselling", href: "/admissions" },
+      ],
+    },
+    {
+      title: "Student Support",
+      items: [
+        { label: "Frequently Asked Questions", href: "/faq" },
+        { label: "Contact & Campus Location", href: "/contact" },
+        { label: "Book a Demo Class", href: "/admissions" },
+        { label: "Privacy Policy", href: "/privacy-policy" },
+        { label: "Terms & Conditions", href: "/terms-and-conditions" },
+      ],
+    },
+  ],
+  stats: [
+    {
+      label: "Years of Academic Trust",
+      value: "10+",
+      description: "Dedicated to student growth and conceptual foundation since 2014.",
+    },
+    {
+      label: "Mentored Students",
+      value: "4,500+",
+      description: "Sample metric showcasing student alumni across diverse streams.",
+    },
+    {
+      label: "Faculty Experience",
+      value: "12+ Yrs",
+      description: "Average teaching experience of our core subject masters.",
+    },
+    {
+      label: "Student-Mentor Ratio",
+      value: "20:1",
+      description: "Intentionally limited batch sizes for personal doubt resolution.",
+    },
+  ],
+  methodologySteps: [
+    {
+      step: "01",
+      title: "Concept Clarity First",
+      description:
+        "Every chapter starts with fundamental principles, visual demonstrations, and practical analogies before advancing to complex numericals.",
+    },
+    {
+      step: "02",
+      title: "Daily Practice Problem Sets",
+      description:
+        "Structured DPPs with graded difficulty levels reinforce classroom learning and sharpen speed, precision, and problem-solving agility.",
+    },
+    {
+      step: "03",
+      title: "1-on-1 Dedicated Doubt Clinics",
+      description:
+        "Scheduled daily doubt counters ensure no student carries unanswered queries home. Mentors assist until concepts are crystal clear.",
+    },
+    {
+      step: "04",
+      title: "Weekly Assessments & Analytics",
+      description:
+        "Simulated testing with instant micro-analytics identifies weak spots, time management gaps, and continuous progress trends.",
+    },
+  ],
+  admissionSteps: [
+    {
+      stepNumber: "01",
+      title: "Discover Your Course",
+      description:
+        "Browse our curriculum, course outlines, and batch options to find the ideal match for your academic goals.",
+      actionText: "Browse Courses",
+    },
+    {
+      stepNumber: "02",
+      title: "Schedule Free Counselling",
+      description:
+        "Meet our senior academic counsellors to evaluate current preparation levels and receive tailored study roadmaps.",
+      actionText: "Book Counselling",
+    },
+    {
+      stepNumber: "03",
+      title: "Attend a Trial Class",
+      description:
+        "Experience our teaching methodology, interactive classroom environment, and mentor communication firsthand.",
+      actionText: "Request Demo",
+    },
+    {
+      stepNumber: "04",
+      title: "Choose Batch & Finalize",
+      description:
+        "Select your preferred morning or evening timing, complete the simple documentation, and begin your journey.",
+      actionText: "Enrol Today",
+    },
+  ],
+  gallery: [
+    {
+      title: "Interactive Smart Classroom",
+      category: "Infrastructure",
+      image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Collaborative Study Hall",
+      category: "Learning Environment",
+      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&auto=format&fit=crop&q=80",
+    },
+    {
+      title: "One-on-One Faculty Mentorship",
+      category: "Mentorship",
+      image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Well-Equipped Science Laboratory",
+      category: "Practical Learning",
+      image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Weekly Mock Examination Session",
+      category: "Testing",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Dedicated Reading & Reference Library",
+      category: "Self Study",
+      image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&auto=format&fit=crop&q=80",
+    },
+  ],
+};
+
+export const coursesData: Course[] = [
+  {
+    id: "course-1",
+    slug: "school-tuition-class-9-10",
+    title: "School Tuition: Classes 9 & 10",
+    subtitle: "Complete Academic Mastery for CBSE & State Boards",
+    category: "School Tuition",
+    badge: "Most Popular for School",
+    shortDescription:
+      "Comprehensive year-long guidance covering Mathematics, Science, and English with emphasis on fundamental conceptual clarity and school exam scoring.",
+    fullDescription:
+      "The Class 9 & 10 Foundation Program is engineered to transform school education from rote memorization into intuitive understanding. Students master core principles across Physics, Chemistry, Biology, and Mathematics through structured lectures, regular NCERT-focused worksheets, and chapter-wise tests. Dedicated doubt clearance sessions and parental progress reviews ensure consistent academic confidence.",
+    targetAudience: "Students moving to Class 9 or 10 aiming for 90%+ in Board Exams & Olympiad readiness.",
+    duration: "10 Months (Academic Year)",
+    batchTimings: "Batch A: 4:30 PM – 7:00 PM | Batch B: 6:00 PM – 8:30 PM (Mon to Fri)",
+    mode: "Classroom",
+    startingFee: 32000,
+    feeNote: "Annual fee payable in 3 flexible installments. Includes study modules & mock test series.",
+    installmentsAvailable: true,
+    featured: true,
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=80",
+    facultyIds: ["fac-1", "fac-3"],
+    seatsPerBatch: 24,
+    keyOutcomes: [
+      "Thorough command over NCERT and exemplar textbook problems",
+      "Regular testing aligned with latest Board question blueprints",
+      "Special crash review and revision modules before Board examinations",
+      "Logical reasoning foundation for future competitive exams",
+    ],
+    features: [
+      "Printed comprehensive study packages & formula booklets",
+      "Weekly subjective and objective chapter tests",
+      "Daily 30-minute doubt clearance desk",
+      "Monthly parent-teacher academic review meeting",
+      "Classroom air-conditioned environment with audiovisual support",
+    ],
+    syllabus: [
+      {
+        title: "Mathematics Core",
+        topics: [
+          "Number Systems & Real Numbers",
+          "Polynomials, Linear & Quadratic Equations",
+          "Coordinate Geometry & Trigonometric Identities",
+          "Triangles, Circles, and Surface Areas & Volumes",
+          "Statistics & Probability with Real-World Case Studies",
+        ],
+      },
+      {
+        title: "Science: Physics & Chemistry",
+        topics: [
+          "Motion, Force, Laws of Motion & Gravitation",
+          "Work, Energy, Sound & Electricity",
+          "Chemical Reactions, Acids, Bases & Salts",
+          "Metals and Non-Metals, Carbon & its Compounds",
+          "Practical experiments and laboratory observations",
+        ],
+      },
+      {
+        title: "Biology & Environmental Sciences",
+        topics: [
+          "Life Processes: Nutrition, Respiration & Circulation",
+          "Control & Coordination in Organisms",
+          "Heredity, Evolution & Reproduction",
+          "Our Environment and Sustainable Resource Management",
+        ],
+      },
+    ],
+  },
+  {
+    id: "course-2",
+    slug: "higher-secondary-science",
+    title: "Higher Secondary: Classes 11 & 12 Science",
+    subtitle: "Physics, Chemistry, Mathematics & Biology (PCMB)",
+    category: "Higher Secondary",
+    badge: "Flagship Program",
+    shortDescription:
+      "Rigorous two-year curriculum bridging Board syllabus and competitive entrance requirements with seasoned senior faculty.",
+    fullDescription:
+      "Classes 11 and 12 define a student's scientific career. Our Science program delivers rigorous, in-depth coaching for Physics, Chemistry, Mathematics, and Biology. We ensure students build strong theoretical mastery for school and Board exams while concurrently preparing for competitive exam speed and application questions.",
+    targetAudience: "Class 11 & 12 Science students targeting top percentile in Boards and entrance exams.",
+    duration: "24 Months (2 Academic Years)",
+    batchTimings: "Morning Batch: 7:00 AM – 10:30 AM | Evening Batch: 4:00 PM – 7:30 PM",
+    mode: "Hybrid",
+    startingFee: 48000,
+    feeNote: "Per academic year fee. Scholarships available up to 40% based on Class 10 Board marks.",
+    installmentsAvailable: true,
+    featured: true,
+    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
+    facultyIds: ["fac-1", "fac-2", "fac-4"],
+    seatsPerBatch: 28,
+    keyOutcomes: [
+      "Unshakable conceptual foundation in 11th and 12th science streams",
+      "Seamless synchronization between Board theory and MCQ problem solving",
+      "Systematic coverage of past 15 years Board and entrance question papers",
+      "Confidence in laboratory practical viva and numerical applications",
+    ],
+    features: [
+      "In-depth concept notes, graded assignment booklets & solved archives",
+      "Bi-weekly Sunday minor tests & monthly cumulative grand tests",
+      "Dedicated doubt faculty available after regular lecture hours",
+      "Digital student portal access for revision lecture recordings",
+    ],
+    syllabus: [
+      {
+        title: "Physics (Class 11 & 12)",
+        topics: [
+          "Kinematics, Laws of Motion & Rotational Dynamics",
+          "Thermodynamics, Waves & Oscillations",
+          "Electrostatics, Current Electricity & Magnetism",
+          "Electromagnetic Induction & Alternating Currents",
+          "Optics, Modern Physics & Semiconductor Devices",
+        ],
+      },
+      {
+        title: "Chemistry (Physical, Organic & Inorganic)",
+        topics: [
+          "Atomic Structure, Chemical Bonding & Periodic Table",
+          "Chemical Equilibrium, Kinetics & Thermodynamics",
+          "Coordination Compounds, Metallurgy & p/d/f Block Elements",
+          "Hydrocarbons, Haloalkanes & Carbonyl Compounds",
+          "Biomolecules, Polymers & Surface Chemistry",
+        ],
+      },
+    ],
+  },
+  {
+    id: "course-3",
+    slug: "jee-preparation-integrated",
+    title: "JEE Main & Advanced 2-Year Program",
+    subtitle: "Targeting Top IITs, NITs, and Premier Engineering Institutes",
+    category: "JEE Preparation",
+    badge: "Premier Engineering Track",
+    shortDescription:
+      "Targeted entrance coaching with advanced numerical practice, multi-concept problems, and computer-based test simulation.",
+    fullDescription:
+      "Our JEE Preparation Program is specifically tailored for engineering aspirants who aim to rank among the top percentile nationwide. The curriculum emphasizes analytical thinking, multi-concept integration, time management, and examination psychology. Backed by simulated national-level test series that mirror the actual NTA CBT interface.",
+    targetAudience: "Passionate Class 11 and 12 students aiming for JEE Main, JEE Advanced, and BITSAT.",
+    duration: "2 Years (Integrated with Boards)",
+    batchTimings: "Weekdays: 3:30 PM – 8:00 PM | Alternate Weekend Intensive Tests",
+    mode: "Classroom",
+    startingFee: 75000,
+    feeNote: "Annual fee including all study packages, national online test series & doubt support.",
+    installmentsAvailable: true,
+    featured: true,
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&auto=format&fit=crop&q=80",
+    facultyIds: ["fac-1", "fac-2"],
+    seatsPerBatch: 22,
+    keyOutcomes: [
+      "Speed and accuracy mastery across JEE Main & Advanced patterns",
+      "Complete familiarity with Computer Based Test (CBT) environment",
+      "Targeted error analysis to minimize negative marking",
+      "Comprehensive coverage of advanced level question archives (1978–2024)",
+    ],
+    features: [
+      "Daily Practice Problems (DPP) with video explanations",
+      "Bi-weekly Computer-Based Mock Tests with All-India ranking simulation",
+      "Special Advanced Problem Solving sessions for high-scorers",
+      "Personal academic mentor assigned to monitor test analytics",
+    ],
+    syllabus: [
+      {
+        title: "Advanced Mathematics",
+        topics: [
+          "Calculus: Limits, Continuity, Differentiation & Definite Integrals",
+          "Algebra: Complex Numbers, Matrices, Determinants & Permutations",
+          "Vectors, 3D Geometry & Conic Sections",
+        ],
+      },
+      {
+        title: "Advanced Physics & Chemistry",
+        topics: [
+          "Classical Mechanics, Fluid Dynamics & Rotational Motion",
+          "Electrodynamics & Wave Optics",
+          "Reaction Mechanisms, Stereochemistry & Inorganic Qualitative Analysis",
+        ],
+      },
+    ],
+  },
+  {
+    id: "course-4",
+    slug: "neet-medical-prep",
+    title: "NEET-UG Medical Entrance Intensive",
+    subtitle: "Comprehensive Biology, Chemistry & Physics for Medical Aspirants",
+    category: "NEET Preparation",
+    badge: "High Conversion",
+    shortDescription:
+      "NCERT line-by-line mastery, high-yield diagrams, speed drills, and rigorous negative-marking control for NEET medical aspirants.",
+    fullDescription:
+      "Cracking NEET-UG demands 100% precision in NCERT Biology combined with problem-solving agility in Physics and Chemistry. Our faculty decodes every page and diagram of NCERT, training students to solve 180 questions in 200 minutes with minimal errors. Includes OMR sheet practice drills and individual performance counselling.",
+    targetAudience: "Class 11, 12, and repeater students aiming for MBBS and BDS admissions in government medical colleges.",
+    duration: "1 Year / 2 Year Options",
+    batchTimings: "8:00 AM – 1:30 PM (Regular) | 2:00 PM – 7:30 PM (Evening)",
+    mode: "Classroom",
+    startingFee: 70000,
+    feeNote: "All inclusive with printed NCERT-booster study modules and 60+ OMR full tests.",
+    installmentsAvailable: true,
+    featured: true,
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
+    facultyIds: ["fac-2", "fac-4"],
+    seatsPerBatch: 25,
+    keyOutcomes: [
+      "Targeting 350+ out of 360 marks in NEET Biology",
+      "High-speed numerical solving tricks for NEET Physics",
+      "Mastery of organic reaction pathways & inorganic tables",
+      "Error log maintenance to systematically eradicate repeat mistakes",
+    ],
+    features: [
+      "NCERT Line-by-Line Question Bank with 10,000+ curated MCQs",
+      "Weekly Sunday OMR Mock Tests mimicking actual NTA NEET atmosphere",
+      "Biology diagram flashcards & formula handbooks",
+      "Regular motivational sessions by medical alumni & doctors",
+    ],
+    syllabus: [
+      {
+        title: "Biology (Botany & Zoology)",
+        topics: [
+          "Diversity in Living World, Plant & Animal Kingdom",
+          "Cell Biology, Genetics, Molecular Basis of Inheritance",
+          "Human Physiology: Nervous, Endocrine, Digestive & Circulatory",
+          "Ecology, Environment & Biotechnology Applications",
+        ],
+      },
+      {
+        title: "Physics & Chemistry for NEET",
+        topics: [
+          "Mechanics, Optics, Thermodynamics & Modern Physics",
+          "Inorganic Chemistry (NCERT focus) & Physical Numerical Formulae",
+          "Organic Chemistry Transformations and Name Reactions",
+        ],
+      },
+    ],
+  },
+  {
+    id: "course-5",
+    slug: "gujcet-state-engineering-prep",
+    title: "GUJCET & State Entrance Crash / Full Batch",
+    subtitle: "State Engineering and Pharmacy Entrance Exam Focus",
+    category: "GUJCET Preparation",
+    badge: "State Focused",
+    shortDescription:
+      "Targeted program covering textbook fundamentals, speed calculation shortcuts, and past 10-year state entrance question trends.",
+    fullDescription:
+      "Specially designed for students aiming for premier state engineering and pharmacy seats. The course zeroes in on state textbook line items, recurring question patterns, time management strategies, and chapter-wise shortcut methods to maximize scoring in the 120-minute examination.",
+    targetAudience: "Class 12 students appearing for Gujarat and regional state engineering/pharmacy entrance tests.",
+    duration: "3 Months (Fast-Track) / 8 Months (Comprehensive)",
+    batchTimings: "Morning Batch: 8:00 AM – 11:30 AM",
+    mode: "Classroom",
+    startingFee: 18000,
+    feeNote: "Special crash course and comprehensive batch fee options.",
+    installmentsAvailable: false,
+    featured: false,
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    facultyIds: ["fac-1", "fac-2"],
+    seatsPerBatch: 30,
+    keyOutcomes: [
+      "Complete coverage of State Board textbook numericals",
+      "High-speed MCQ solving techniques without lengthy derivations",
+      "Extensive timed practice with past 12 years question papers",
+    ],
+    features: [
+      "Subject-wise summary booklets with high-frequency formulas",
+      "25 Full syllabus timed mock tests",
+      "Rank prediction and college counselling guidance",
+    ],
+    syllabus: [
+      {
+        title: "Physics & Chemistry State Syllabus",
+        topics: ["All standard state board Class 12 chapters with MCQ drill"],
+      },
+      {
+        title: "Mathematics / Biology Section",
+        topics: ["Speed-solving methods, elimination tricks, and timed practice"],
+      },
+    ],
+  },
+  {
+    id: "course-6",
+    slug: "gpsc-upsc-foundation-course",
+    title: "Civil Services Foundation: GPSC & UPSC",
+    subtitle: "General Studies, CSAT, Essay & Current Affairs Fundamentals",
+    category: "GPSC & UPSC Foundation",
+    badge: "Career Builder",
+    shortDescription:
+      "Build deep analytical thinking, answer writing skills, and comprehensive General Studies grounding for administrative services.",
+    fullDescription:
+      "A structured foundation program designed for college students and graduates aspiring for Class 1 & 2 administrative positions. Features comprehensive coverage of Indian Polity, History, Geography, Economy, Ethics, and Daily Newspaper Editorial Analysis.",
+    targetAudience: "Undergraduates and graduates preparing for GPSC Class 1-2 and UPSC Civil Services.",
+    duration: "12 Months (Foundation to Prelims)",
+    batchTimings: "Evening Batch: 6:30 PM – 9:00 PM | Weekend Batch: 9:00 AM – 2:00 PM",
+    mode: "Hybrid",
+    startingFee: 42000,
+    feeNote: "Includes monthly current affairs compilations and answer writing evaluation.",
+    installmentsAvailable: true,
+    featured: true,
+    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&auto=format&fit=crop&q=80",
+    facultyIds: ["fac-5"],
+    seatsPerBatch: 28,
+    keyOutcomes: [
+      "Holistic understanding of Indian Constitution, Governance & History",
+      "Regular answer writing practice with personalized faculty feedback",
+      "Monthly compilations of national and regional current events",
+      "CSAT aptitude, comprehension, and quantitative reasoning mastery",
+    ],
+    features: [
+      "Printed GS modules written by experienced civil services mentors",
+      "Weekly Mains answer writing evaluation and rubric review",
+      "Guest lectures by serving administrative officers",
+      "Library access and dedicated study reading rooms",
+    ],
+    syllabus: [
+      {
+        title: "General Studies (Prelims & Mains)",
+        topics: [
+          "Indian Polity & Governance, Constitutional Framework",
+          "Modern Indian History & Art and Culture",
+          "Physical & Human Geography of India and the World",
+          "Indian Economy, Budgeting, and Social Development",
+        ],
+      },
+      {
+        title: "CSAT & Analytical Aptitude",
+        topics: [
+          "Reading Comprehension, Logical Reasoning, and Decision Making",
+          "Data Interpretation, Quantitative Aptitude & Mental Ability",
+        ],
+      },
+    ],
+  },
+  {
+    id: "course-7",
+    slug: "banking-ssc-government-exams",
+    title: "SSC CGL / CHSL & Bank PO / Clerk Prep",
+    subtitle: "Quantitative Aptitude, Reasoning, English & General Awareness",
+    category: "Banking & Govt Exams",
+    badge: "High Placement Rate",
+    shortDescription:
+      "Fast-track shortcuts, Vedic math calculations, speed reasoning, and daily computer-based practice for government job exams.",
+    fullDescription:
+      "Engineered for aspirants targeting staff selection commissions and banking sector examinations (IBPS, SBI, RRB). The program focuses on split-second calculations, pattern recognition, grammar rules, and current banking awareness.",
+    targetAudience: "Graduates seeking government careers through SSC, Banking, Railways, and Insurance tests.",
+    duration: "6 Months Intensive",
+    batchTimings: "Morning: 8:00 AM – 11:00 AM | Evening: 5:00 PM – 8:00 PM",
+    mode: "Classroom",
+    startingFee: 26000,
+    feeNote: "Lifetime library access & unlimited online mock test portal access until selection.",
+    installmentsAvailable: true,
+    featured: false,
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=80",
+    facultyIds: ["fac-3", "fac-5"],
+    seatsPerBatch: 30,
+    keyOutcomes: [
+      "Mastery over 100+ Vedic math shortcuts for rapid arithmetic solving",
+      "Accuracy across high-difficulty reasoning puzzles and syllogisms",
+      "Comprehensive banking and financial awareness revision",
+    ],
+    features: [
+      "Daily 100-question timed speed test in computer lab",
+      "Comprehensive shortcut formula pocketbook",
+      "Interview preparation and personality development sessions",
+    ],
+    syllabus: [
+      {
+        title: "Quantitative Aptitude & Reasoning",
+        topics: [
+          "Simplification, Number Series, Percentage, Profit & Loss",
+          "Time & Work, Simple & Compound Interest, Data Interpretation",
+          "Seating Arrangements, Puzzles, Blood Relations, Syllogisms",
+        ],
+      },
+      {
+        title: "English & General Awareness",
+        topics: [
+          "Grammar Error Spotting, Cloze Test, Reading Passages",
+          "Banking Terminology, Current Affairs & Static General Knowledge",
+        ],
+      },
+    ],
+  },
+  {
+    id: "course-8",
+    slug: "spoken-english-communication",
+    title: "Spoken English & Communication Skills",
+    subtitle: "Fluency, Public Speaking, Vocabulary & Professional Personality",
+    category: "Communication Skills",
+    badge: "Personal Development",
+    shortDescription:
+      "Interactive speaking drills, group discussions, accent refinement, and confident presentation skills for students and professionals.",
+    fullDescription:
+      "Language confidence opens doors in academics, college interviews, and career placements. Our practical Spoken English workshop focuses on speaking without hesitation through extempore speeches, group debates, everyday situational conversations, and voice modulation coaching.",
+    targetAudience: "School/college students and job seekers wanting to eliminate stage fear and speak fluent English.",
+    duration: "3 Months (48 Classroom Hours)",
+    batchTimings: "Morning: 7:00 AM – 8:30 AM | Evening: 7:00 PM – 8:30 PM",
+    mode: "Classroom",
+    startingFee: 12000,
+    feeNote: "Includes audio listening lab materials, practice workbook, and certificate of completion.",
+    installmentsAvailable: false,
+    featured: false,
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop&q=80",
+    facultyIds: ["fac-3"],
+    seatsPerBatch: 18,
+    keyOutcomes: [
+      "Overcoming hesitation and fear of speaking English in public",
+      "Correct sentence structuring and practical grammar usage",
+      "Enhanced vocabulary for everyday and workplace dialogues",
+      "Confident participation in college interviews and group discussions",
+    ],
+    features: [
+      "Audio-visual listening lab drills",
+      "Weekly live speech recordings with mentor feedback",
+      "Active group discussions on contemporary topics",
+      "Small batch size capped at 18 learners for individualized speaking time",
+    ],
+    syllabus: [
+      {
+        title: "Fluency & Everyday Dialogue",
+        topics: [
+          "Everyday conversational phrases and sentence structuring",
+          "Pronunciation, intonation, and eliminating mother tongue influence",
+          "Active listening drills and responding naturally",
+        ],
+      },
+      {
+        title: "Public Speaking & Interview Skills",
+        topics: [
+          "Body language, posture, and eye contact techniques",
+          "Structuring thoughts for impromptu speeches (JAM sessions)",
+          "Group discussion etiquette, resume pitch, and interview simulation",
+        ],
+      },
+    ],
+  },
+];
+
+export const facultyData: FacultyMember[] = [
+  {
+    id: "fac-1",
+    name: "Dr. Rajeshwar Sharma",
+    role: "Head of Physics & Academic Director",
+    qualification: "Ph.D. in Applied Physics (IIT Roorkee), M.Sc.",
+    experienceYears: 16,
+    subjects: ["Physics", "Mechanics", "Electromagnetism"],
+    bio: "Dr. Sharma has coached over 3,000 engineering and medical aspirants with an engaging, visualization-first pedagogy. His physics demonstration models make abstract concepts effortlessly clear.",
+    teachingApproach:
+      "I believe physics is not about memorizing equations; it is about observing the universe. When students visualize the force diagrams and field lines, the numerical solutions flow naturally.",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
+    featured: true,
+  },
+  {
+    id: "fac-2",
+    name: "Prof. Ananya Sen",
+    role: "Senior Faculty — Organic & Physical Chemistry",
+    qualification: "M.Sc. Chemistry (Gold Medalist), CSIR NET Qualified",
+    experienceYears: 12,
+    subjects: ["Chemistry", "Organic Synthesis", "Physical Chemistry"],
+    bio: "Renowned for her systematic reaction mechanism maps, Prof. Sen simplifies complex organic pathways and periodic trends. Her student-centered chemistry notes are widely celebrated.",
+    teachingApproach:
+      "Organic chemistry is like learning a language. Once students grasp electron density movement and nucleophilic attacks, the reactions solve themselves like a puzzle.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80",
+    featured: true,
+  },
+  {
+    id: "fac-3",
+    name: "Vikramaditya Mehta",
+    role: "Dean of Mathematics & Aptitude",
+    qualification: "M.Tech (Computer Science), B.Tech (ECE)",
+    experienceYears: 14,
+    subjects: ["Mathematics", "Calculus", "Vedic Math & Aptitude"],
+    bio: "A passionate math enthusiast with 14 years of teaching experience across school board curriculums, JEE Main, and competitive aptitude examinations.",
+    teachingApproach:
+      "Math anxiety vanishes when students understand the 'why' behind formulas. I introduce shortcut checks and geometric interpretations to make every math problem approachable.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
+    featured: true,
+  },
+  {
+    id: "fac-4",
+    name: "Dr. Sneha Trivedi",
+    role: "Senior Mentor — Biology & Medical Studies",
+    qualification: "MBBS, MD (Physiology)",
+    experienceYears: 10,
+    subjects: ["Biology", "Zoology", "Human Physiology"],
+    bio: "Bringing clinical experience into the classroom, Dr. Sneha bridges textbook biology with real medical cases, helping NEET aspirants master high-yield concepts and diagrams with ease.",
+    teachingApproach:
+      "Medicine begins with curiosity about the human body. We examine every NCERT paragraph and diagram as if preparing for a patient case, creating permanent memory hooks.",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&auto=format&fit=crop&q=80",
+    featured: true,
+  },
+  {
+    id: "fac-5",
+    name: "Karan Dave",
+    role: "Senior Mentor — General Studies & Administrative Exams",
+    qualification: "M.A. Public Administration, UGC NET Qualified",
+    experienceYears: 11,
+    subjects: ["Indian Polity", "Modern History", "Current Affairs"],
+    bio: "Having mentored hundreds of civil service aspirants, Karan specializes in analytical answer writing, constitutional interpretations, and structured current affairs synthesis.",
+    teachingApproach:
+      "A civil servant must connect diverse disciplines. My focus is on teaching students how to synthesize current socio-economic trends with foundational constitutional values.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+    featured: false,
+  },
+];
+
+export const pricingPlansData: PricingPlan[] = [
+  {
+    id: "plan-foundation",
+    name: "Foundation Plan",
+    tagline: "Essential concept coaching with daily classroom guidance",
+    feeINR: 24000,
+    period: "Per Academic Year",
+    isPopular: false,
+    duration: "10 Months",
+    subjectsCovered: "Core Subjects (e.g. Maths + Science or GS)",
+    classMode: "Classroom",
+    recommendedFor: "School tuition students and foundation learners building base concepts",
+    features: [
+      { included: true, text: "Comprehensive printed theory & worksheet modules" },
+      { included: true, text: "4 days per week structured lectures" },
+      { included: true, text: "Daily 30-minute doubt clearance support" },
+      { included: true, text: "Chapter-wise monthly assessment tests" },
+      { included: true, text: "Parent-teacher progress meetings quarterly" },
+      { included: false, text: "All-India CBT mock test ranking series" },
+      { included: false, text: "Personal 1-on-1 dedicated mentor allotment" },
+      { included: false, text: "Digital video portal recorded revision library" },
+    ],
+    ctaText: "Enquire About Foundation",
+  },
+  {
+    id: "plan-focus",
+    name: "Focus Plan",
+    tagline: "Our most balanced, comprehensive curriculum for top performance",
+    feeINR: 42000,
+    period: "Per Academic Year",
+    isPopular: true,
+    duration: "10–12 Months",
+    subjectsCovered: "All Stream Subjects + Weekly Test Series",
+    classMode: "Hybrid (Classroom + Online Portal)",
+    recommendedFor: "Board exam rank aspirants and competitive entrance candidates",
+    features: [
+      { included: true, text: "Complete printed study kits, DPPs & formula booklets" },
+      { included: true, text: "5 days per week intensive lectures + weekend tests" },
+      { included: true, text: "Priority daily 1-on-1 doubt clearing desk" },
+      { included: true, text: "Bi-weekly scheduled mock exams with detailed analytics" },
+      { included: true, text: "Monthly parent-teacher performance reports" },
+      { included: true, text: "Digital portal access for recorded lecture revision" },
+      { included: true, text: "Past 10 years solved exam paper archives" },
+      { included: false, text: "Personal 24/7 dedicated mentor phone hotline" },
+    ],
+    ctaText: "Choose Focus Plan",
+  },
+  {
+    id: "plan-advanced",
+    name: "Advanced Plan",
+    tagline: "Intensive training, personal mentorship & national rank series",
+    feeINR: 68000,
+    period: "Per Academic Year",
+    isPopular: false,
+    duration: "Full Year Integrated",
+    subjectsCovered: "Complete Stream + Entrance (JEE / NEET / State)",
+    classMode: "Classroom + VIP Academic Support",
+    recommendedFor: "High-aspiring candidates targeting top percentiles & government colleges",
+    features: [
+      { included: true, text: "All printed books, NCERT boosters & advanced question archives" },
+      { included: true, text: "6 days per week rigorous teaching & practice sessions" },
+      { included: true, text: "Dedicated personal senior mentor for academic roadmap" },
+      { included: true, text: "Weekly Computer-Based Test (CBT) & OMR national simulation" },
+      { included: true, text: "In-depth AI-style error diagnosis & time management charts" },
+      { included: true, text: "Full digital portal access + offline reading room seat" },
+      { included: true, text: "Small batch size capped at 20 students" },
+      { included: true, text: "Interview, GD & counselling choice-filling guidance" },
+    ],
+    ctaText: "Apply for Advanced Plan",
+  },
+];
+
+export const testimonialsData: Testimonial[] = [
+  {
+    id: "test-1",
+    studentName: "Aarav Patel",
+    guardianName: "Sunil Patel (Father)",
+    courseTaken: "JEE Main & Advanced Integrated",
+    batchYear: "Class of 2024",
+    rating: 5,
+    avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&auto=format&fit=crop&q=80",
+    quote:
+      "The dedicated doubt sessions at this coaching institute made all the difference. The faculty helped me overcome my fear of rotational physics, and the weekly CBT tests prepared me for the actual exam pressure.",
+    achievementHighlight: "99.2 Percentile (JEE Main)",
+    verifiedDemo: true,
+  },
+  {
+    id: "test-2",
+    studentName: "Pooja Varma",
+    guardianName: "Meena Varma (Mother)",
+    courseTaken: "NEET-UG Medical Intensive",
+    batchYear: "Class of 2024",
+    rating: 5,
+    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&auto=format&fit=crop&q=80",
+    quote:
+      "Dr. Sneha's line-by-line NCERT breakdown in Biology was unmatched. The OMR test series helped me eliminate silly negative marks. I couldn't have achieved my medical dream without this guidance.",
+    achievementHighlight: "672/720 in NEET",
+    verifiedDemo: true,
+  },
+  {
+    id: "test-3",
+    studentName: "Rohan Dave",
+    guardianName: "Pradeep Dave (Father)",
+    courseTaken: "Class 10 Board Excellence",
+    batchYear: "Class of 2024",
+    rating: 5,
+    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80",
+    quote:
+      "Joining in Class 9 built my math and science concepts so cleanly that Class 10 felt smooth. The teachers are approachable and always available to explain concepts a second or third time.",
+    achievementHighlight: "96.4% in CBSE Class 10",
+    verifiedDemo: true,
+  },
+  {
+    id: "test-4",
+    studentName: "Dhwani Joshi",
+    courseTaken: "Civil Services GPSC Foundation",
+    batchYear: "Batch 2023–24",
+    rating: 5,
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+    quote:
+      "Karan Sir's Mains answer writing reviews transformed how I structure essay points and polity case studies. The study atmosphere and curated library give you the discipline you need.",
+    achievementHighlight: "Qualified Prelims & Mains Cleared",
+    verifiedDemo: true,
+  },
+];
+
+export const sampleResultsData: SampleResult[] = [
+  {
+    id: "res-1",
+    studentName: "Manav Shah",
+    exam: "JEE Main 2024",
+    category: "Competitive Exams",
+    scoreOrRank: "99.45%ile",
+    percentile: "All India Rank: 612",
+    course: "JEE 2-Year Integrated Program",
+    year: "2024",
+    badge: "Top 0.5% Nationally",
+    quote: "Structured chapter tests and error correction logs gave me the edge.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80",
+  },
+  {
+    id: "res-2",
+    studentName: "Diya Trivedi",
+    exam: "NEET-UG 2024",
+    category: "Competitive Exams",
+    scoreOrRank: "680 / 720",
+    percentile: "State Rank: 48",
+    course: "NEET Intensive Classroom Batch",
+    year: "2024",
+    badge: "Government Medical College Merit",
+    quote: "NCERT focus and rigorous OMR drill made all questions familiar.",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=80",
+  },
+  {
+    id: "res-3",
+    studentName: "Kavya Patel",
+    exam: "CBSE Class 12 Science",
+    category: "Board Exams",
+    scoreOrRank: "97.2%",
+    percentile: "School Topper - 97.2%",
+    course: "Higher Secondary Science (PCMB)",
+    year: "2024",
+    badge: "100/100 in Mathematics",
+    quote: "Regular doubt desk sessions prevented backlog during tough chapters.",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&auto=format&fit=crop&q=80",
+  },
+  {
+    id: "res-4",
+    studentName: "Yash Mehta",
+    exam: "GUJCET 2024",
+    category: "Competitive Exams",
+    scoreOrRank: "116.5 / 120",
+    percentile: "Percentile Rank: 99.82",
+    course: "GUJCET Crash & Full Batch",
+    year: "2024",
+    badge: "State Engineering Merit Seat",
+    quote: "The shortcut formula handbook saved 20 minutes in the exam hall.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+  },
+  {
+    id: "res-5",
+    studentName: "Ananya Iyer",
+    exam: "Class 10 Board Exam",
+    category: "Board Exams",
+    scoreOrRank: "98.0%",
+    percentile: "Top 0.1% Merit Certificate",
+    course: "Class 9 & 10 Foundation",
+    year: "2024",
+    badge: "Centum in Science & Maths",
+    quote: "The visual experiments in class made science intuitive.",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80",
+  },
+  {
+    id: "res-6",
+    studentName: "Harshil Desai",
+    exam: "GPSC Class 1 & 2 Examination",
+    category: "Government Exams",
+    scoreOrRank: "Rank 34",
+    percentile: "Assistant Commissioner Selection",
+    course: "Civil Services GPSC Foundation",
+    year: "2023",
+    badge: "First Attempt Recommended",
+    quote: "The Mains answer writing evaluation and feedback was the deciding factor.",
+    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&auto=format&fit=crop&q=80",
+  },
+];
+
+export const faqData: FaqItem[] = [
+  {
+    id: "faq-1",
+    category: "Admissions",
+    question: "How do I book a free counselling session or trial class?",
+    answer:
+      "You can submit the online enquiry form on our Admissions page, contact our reception team at +91 98765 43210, or walk into our campus during office hours. Our counsellors will schedule a complimentary 45-minute academic orientation and demo class.",
+  },
+  {
+    id: "faq-2",
+    category: "Admissions",
+    question: "Is there an entrance screening test or scholarship test?",
+    answer:
+      "Yes, we organize the Talent Diagnostic Scholarship Test before every new academic session. High-scoring students are eligible for merit scholarships of up to 40% on tuition fees.",
+  },
+  {
+    id: "faq-3",
+    category: "Courses & Syllabus",
+    question: "Which boards and examination patterns are covered?",
+    answer:
+      "We support CBSE, ICSE, and Gujarat State Board curricula for school tuition and higher secondary courses. For competitive batches, we cover NTA JEE Main & Advanced, NEET-UG, GUJCET, GPSC, and SSC/Banking exam syllabus thoroughly.",
+  },
+  {
+    id: "faq-4",
+    category: "Faculty & Teaching",
+    question: "What qualifications do your faculty members hold?",
+    answer:
+      "All senior mentors hold postgraduate or doctoral degrees from premier universities (IITs, NITs, Medical Colleges, Central Universities) with an average teaching experience exceeding 10 years.",
+  },
+  {
+    id: "faq-5",
+    category: "Faculty & Teaching",
+    question: "What is your approach to solving student doubts?",
+    answer:
+      "We operate dedicated daily doubt counters before and after lectures. Students can sit 1-on-1 with subject mentors until every concept or homework problem is clarified. We also offer a digital doubt forum.",
+  },
+  {
+    id: "faq-6",
+    category: "Fees & Installments",
+    question: "Are fees payable in installments?",
+    answer:
+      "Yes, annual course fees can be divided into 2 to 3 convenient installments spread across the academic session. We also offer concession benefits for siblings and early-bird registrations.",
+  },
+  {
+    id: "faq-7",
+    category: "Batch Timings",
+    question: "Are morning and evening batches available?",
+    answer:
+      "Yes, we offer both morning slots (ideal for dummy school or college students) and evening slots (4:30 PM onwards, ideal for regular school students). Batch timing changes can be accommodated upon request.",
+  },
+  {
+    id: "faq-8",
+    category: "Tests & Material",
+    question: "Are study materials and mock test series included in the fee?",
+    answer:
+      "Yes, all course fees are fully inclusive of printed chapter booklets, formula handbooks, daily practice sheets, and complete access to our offline and online mock testing platform.",
+  },
+];
