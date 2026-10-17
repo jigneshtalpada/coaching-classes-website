@@ -695,5 +695,9 @@ button, input, select, textarea {
   }
 }
 
-
-
+/* Ensure mobile menu active state hides floating action buttons */
+body.mobile-menu-active .floating-actions-container {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.2s ease;
+}
