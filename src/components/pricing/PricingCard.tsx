@@ -45,10 +45,11 @@ export default function PricingCard({ plan }: PricingCardProps) {
             display: "inline-flex",
             alignItems: "center",
             gap: "0.35rem",
-            boxShadow: "0 4px 12px rgba(49, 94, 247, 0.35)",
+            boxShadow: "0 4px 14px rgba(49, 94, 247, 0.4)",
             whiteSpace: "nowrap",
           }}
         >
+          <span className="live-pulse-dot" style={{ backgroundColor: "#FFFFFF" }} />
           <Sparkles size={12} />
           Most Popular Choice
         </div>

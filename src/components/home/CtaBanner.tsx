@@ -14,8 +14,9 @@ export default function CtaBanner() {
         borderTop: "1px solid rgba(255, 255, 255, 0.08)",
       }}
     >
-      {/* Decorative gradient orb */}
+      {/* Decorative gradient orb with pulsing glow */}
       <div
+        className="animate-pulse-glow"
         style={{
           position: "absolute",
           top: "50%",
@@ -24,7 +25,7 @@ export default function CtaBanner() {
           width: "600px",
           height: "600px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(49, 94, 247, 0.18) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(49, 94, 247, 0.22) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
@@ -91,11 +92,7 @@ export default function CtaBanner() {
 
             <a
               href={`tel:${contact.phone.replace(/\s+/g, "")}`}
-              className="btn btn-outline btn-lg"
-              style={{
-                color: "var(--white)",
-                borderColor: "rgba(255, 255, 255, 0.25)",
-              }}
+              className="btn btn-outline-white btn-lg"
             >
               <Phone size={18} />
               Call Helpline: {contact.phone}

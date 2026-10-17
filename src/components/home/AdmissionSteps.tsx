@@ -23,7 +23,7 @@ export default function AdmissionSteps() {
             return (
               <div
                 key={step.stepNumber}
-                className="card card-hover"
+                className="card card-hover step-card"
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -59,6 +59,7 @@ export default function AdmissionSteps() {
                   </div>
 
                   <span
+                    className="step-number"
                     style={{
                       fontFamily: "var(--font-heading)",
                       fontSize: "1.75rem",

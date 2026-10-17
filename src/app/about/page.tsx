@@ -359,7 +359,7 @@ export default function AboutPage() {
               Explore Our Courses
               <ArrowRight size={18} />
             </Link>
-            <Link href="/admissions" className="btn btn-outline btn-lg" style={{ color: "var(--white)", borderColor: "rgba(255, 255, 255, 0.25)" }}>
+            <Link href="/admissions" className="btn btn-outline-white btn-lg">
               Schedule Free Counselling
             </Link>
           </div>

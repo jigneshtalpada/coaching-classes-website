@@ -23,6 +23,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [mounted, setMounted] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const lastScrollYRef = useRef(0);
 
   useEffect(() => {
@@ -41,6 +42,12 @@ export default function Header() {
 
           // Sticky shadow
           setScrolled(currentScrollY > 15);
+
+          // Scroll reading progress
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          if (docHeight > 0) {
+            setScrollProgress(Math.min(100, Math.max(0, (currentScrollY / docHeight) * 100)));
+          }
 
           const diff = currentScrollY - lastScrollYRef.current;
 
@@ -427,6 +434,23 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      {/* Dynamic Scroll Reading Progress Bar */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          height: "2.5px",
+          width: `${scrollProgress}%`,
+          background: "linear-gradient(90deg, #315EF7 0%, #60A5FA 50%, #38BDF8 100%)",
+          transition: "width 0.1s ease-out",
+          zIndex: 10,
+          opacity: scrolled ? 1 : 0,
+          pointerEvents: "none",
+        }}
+        aria-hidden="true"
+      />
     </header>
 
     {/* Portaled Mobile Navigation Drawer & Backdrop */}

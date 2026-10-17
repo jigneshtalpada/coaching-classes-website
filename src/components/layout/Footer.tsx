@@ -75,13 +75,9 @@ export default function Footer() {
                   href={`https://wa.me/${contact.whatsappNumber}?text=Hi%2C+I+would+like+to+enquire+about+courses+at+${encodeURIComponent(siteConfig.name)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-outline"
-                  style={{
-                    color: "var(--white)",
-                    borderColor: "rgba(255, 255, 255, 0.2)",
-                  }}
+                  className="btn btn-outline-whatsapp"
                 >
-                  <WhatsAppIcon size={16} color="#25D366" />
+                  <WhatsAppIcon size={16} />
                   WhatsApp Us
                 </a>
               )}

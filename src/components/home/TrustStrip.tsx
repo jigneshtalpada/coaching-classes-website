@@ -58,13 +58,16 @@ export default function TrustStrip() {
             return (
               <div
                 key={i}
+                className="trust-strip-item"
                 style={{
                   display: "flex",
                   alignItems: "flex-start",
                   gap: "0.85rem",
+                  cursor: "default",
                 }}
               >
                 <div
+                  className="trust-icon-box"
                   style={{
                     width: "40px",
                     height: "40px",

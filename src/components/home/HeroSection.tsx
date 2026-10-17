@@ -20,29 +20,32 @@ export default function HeroSection() {
         borderBottom: "1px solid var(--border-light)",
       }}
     >
-      {/* Subtle decorative background gradient */}
+      {/* Subtle decorative background gradient with ambient breathing glow */}
       <div
+        className="animate-pulse-glow"
         style={{
           position: "absolute",
-          top: "-200px",
-          right: "-150px",
+          top: "-180px",
+          right: "-120px",
           width: "550px",
           height: "550px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(49, 94, 247, 0.08) 0%, rgba(255, 255, 255, 0) 70%)",
+          background: "radial-gradient(circle, rgba(49, 94, 247, 0.12) 0%, rgba(255, 255, 255, 0) 70%)",
           pointerEvents: "none",
         }}
       />
       <div
+        className="animate-pulse-glow"
         style={{
           position: "absolute",
-          bottom: "-250px",
-          left: "-150px",
+          bottom: "-220px",
+          left: "-120px",
           width: "500px",
           height: "500px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(16, 33, 58, 0.05) 0%, rgba(255, 255, 255, 0) 70%)",
+          background: "radial-gradient(circle, rgba(2, 132, 199, 0.09) 0%, rgba(255, 255, 255, 0) 70%)",
           pointerEvents: "none",
+          animationDelay: "3.5s",
         }}
       />
 
@@ -61,6 +64,7 @@ export default function HeroSection() {
             {/* Pill */}
             <div style={{ display: "inline-flex", alignItems: "center" }}>
               <span className="badge badge-blue">
+                <span className="live-pulse-dot" />
                 <Sparkles size={12} />
                 Admissions Open 2025–26
               </span>
@@ -77,13 +81,7 @@ export default function HeroSection() {
               }}
             >
               Learn with Purpose. <br />
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #10213A 0%, #315EF7 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
+              <span className="text-gradient-animated">
                 Achieve Beyond Limits.
               </span>
             </h1>
@@ -231,7 +229,8 @@ export default function HeroSection() {
                 position: "absolute",
                 top: "15px",
                 right: "15px",
-                backgroundColor: "var(--white)",
+                backgroundColor: "rgba(255, 255, 255, 0.95)",
+                backdropFilter: "blur(8px)",
                 borderRadius: "var(--radius-md)",
                 padding: "0.75rem 1rem",
                 boxShadow: "0 10px 25px rgba(16, 33, 58, 0.12)",
@@ -240,7 +239,7 @@ export default function HeroSection() {
                 gap: "0.75rem",
                 border: "1px solid var(--border-light)",
               }}
-              className="hero-floating-top"
+              className="hero-floating-top animate-float-slow"
             >
               <div
                 style={{
@@ -285,7 +284,7 @@ export default function HeroSection() {
                 border: "1px solid var(--border-light)",
                 maxWidth: "320px",
               }}
-              className="hero-floating-bottom"
+              className="hero-floating-bottom animate-float-reverse"
             >
               <div
                 style={{

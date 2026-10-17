@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={i}
-                className="card card-hover"
+                className="card card-hover pillar-card"
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -74,6 +74,7 @@ export default function WhyChooseUs() {
                 }}
               >
                 <div
+                  className="pillar-icon-box"
                   style={{
                     width: "48px",
                     height: "48px",
